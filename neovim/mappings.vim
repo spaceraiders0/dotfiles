@@ -9,7 +9,11 @@ tmap <Esc> <C-\><C-n>
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
 " Reload Vim
-map <A-r> :so $DOTFILES/neovim/init.vim<CR>
+if $DOTFILES != ""
+    map <A-r> :so $DOTFILES/neovim/init.vim<CR>
+else
+    map <A-r> :so ~/.config/nvim/init.vim<CR>
+endif
 
 " Prevent EX mode from opening
 map Q <NOP>
