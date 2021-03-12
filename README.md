@@ -12,8 +12,8 @@ it requires certain folders that exist on your system. In my case, I store most
 of my files on an external hard-drive. Thus, quite a few of my aliases use the
 environment variables that I have defined exclusively for that. However, I have
 tried to make sure that in the case of applications like `NeoVim`, that is is as
-usable to the average person as I can make it. It does still require a bit of
-setup on your end, however.
+usable to the average person as possible. It does still require a bit of setup
+on your end, however.
 <br/>
 <br/>
 In `./bash/.bashrc` file, you can edit the `MAIN` environment variable. This acts
