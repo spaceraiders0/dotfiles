@@ -15,6 +15,7 @@ tried to make sure that in the case of applications like `NeoVim`, that is is as
 usable to the average person as I can make it. It does still require a bit of
 setup on your end, however.
 <br/>
+<br/>
 In `./bash/.bashrc` file, you can edit the `MAIN` environment variable. This acts
 as the root of all of your files. In the case of `NeoVim`, it should attempt to
 pull files from the folder stored in the `DOTFILES` environment variable, but
