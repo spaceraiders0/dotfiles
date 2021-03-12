@@ -9,7 +9,7 @@ tmap <Esc> <C-\><C-n>
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
 " Reload Vim
-map <A-r> :so /run/media/spaceraiders/External Storage/dotfiles/neovim/init.vim<CR>
+map <A-r> :so $DOTFILES/neovim/init.vim<CR>
 
 " Prevent EX mode from opening
 map Q <NOP>
