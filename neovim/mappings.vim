@@ -1,5 +1,3 @@
-
-
 " Shift screen up and down
 noremap <S-E> <C-E>
 noremap <S-Q> <C-Y>
