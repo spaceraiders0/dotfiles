@@ -53,13 +53,6 @@ map ff :Files .<CR>
 map fr :e<CR>                    
 
 " Window / Pane management
-map ws :vnew<CR>
-map wv :new<CR>
-map wq :wq<CR>
-nmap wj <C-W><C-J>
-nmap wk <C-W><C-K>
-nmap wl <C-W><C-L>
-nmap wh <C-W><C-H>
 nmap <silent> wm :call WindowSwap#EasyWindowSwap()<CR>
 map <C-k> :resize +5<CR>
 map <C-j> :resize -5<CR>
