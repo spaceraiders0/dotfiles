@@ -21,10 +21,11 @@
 
 
 " Shift screen up and down
-noremap <S-E> <C-E>
-noremap <S-Q> <C-Y>
+noremap J <C-E>
+noremap K <C-Y>
 
-" Terminal Clearing
+
+" Terminal Leaving
 tmap <Esc> <C-\><C-n>
 
 " Clear highlighted text
@@ -49,7 +50,6 @@ map tt :tabnew<CR>:terminal<CR>
 
 " File management
 map fc :call CopyFilepath()<CR>  
-map ff :Files .<CR>              
 map fr :e<CR>                    
 
 " Window / Pane management
@@ -62,3 +62,18 @@ map <C-l> :vertical resize +5<CR>
 " Buffer management
 nmap <S-Q> :bprevious<CR>
 nmap <S-E> :bnext<CR>
+
+" C-Style block comments
+let @c = "i/*€kb€kb€kb€kb*/kA @a"
+
+" Quick-access dotfile edits.
+if $DOTFILES != ""
+    command! Nrc edit $DOTFILES/neovim/init.vim 
+    command! Brc edit $DOTFILES/bash/.bashrc    
+else
+    command! Nrc edit ~/.config/nvim/init.vim 
+    command! Brc edit ~/.bashrc    
+endif
+
+command! Qrc edit ~/.config/qtile/config.py 
+command! Krc edit ~/.config/kitty/kitty.conf

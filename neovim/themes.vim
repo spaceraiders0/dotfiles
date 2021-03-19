@@ -17,5 +17,5 @@
 "
 " =======================================================================================================
 
-colorscheme badwolf
+colorscheme sitruuna
 set termguicolors

@@ -33,6 +33,10 @@ endif
 syntax on
 filetype plugin on
 
+function CopyFilepath()
+    redir @+ | echo expand("%:p") | redir END
+endfunction
+
 " Determines the location of dotfiles.
 if $DOTFILES == ""
     let rcpath = "~/.config/nvim"
