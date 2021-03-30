@@ -1,0 +1,42 @@
+[cpu-colors]
+    cpu-underline = #993333
+    cpu-background = #402
+    bar-background = #303336
+
+[bar/cpu]
+    font-0 = DejaVuSansMono Nerd Font:style=Mono:size=10
+    radius=10
+
+    background = ${cpu-colors.bar-background}
+    override-redirect = True
+    enable-ipc = true
+
+    ; bar dimensions
+    offset-y = 96.5%
+    offset-x = 1%
+    height = 3%
+    width = 8%
+    line-size = 3
+
+    modules-center = cpu
+
+[module/cpu]
+    ; CPU settings
+    type = internal/cpu
+    format = <label> <ramp-coreload>
+    label = " CPU   %percentage:2%%"
+    interval = 1
+    
+    ; format-background = ${cpu-colors.cpu-underline}
+    format-underline = ${cpu-colors.cpu-underline}
+
+    ; different core icons
+    ramp-coreload-spacing = 0
+    ramp-coreload-0 = ▁
+    ramp-coreload-1 = ▂
+    ramp-coreload-2 = ▃
+    ramp-coreload-3 = ▄
+    ramp-coreload-4 = ▅
+    ramp-coreload-5 = ▆
+    ramp-coreload-6 = ▇
+    ramp-coreload-7 = █ 

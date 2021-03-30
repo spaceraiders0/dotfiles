@@ -1,0 +1,75 @@
+[colors]
+    ; main bar colors
+        bar-background = #1d1f21
+
+     cpu module colors
+        cpu-underline = #f07178
+        cpu-background = #402
+
+    ; memory module colors
+        mem-underline = #82aaff
+        mem-background = #822
+
+    ; i3 module colors
+        focused-background = #616161
+        focused-foreground = #404040
+        focused-underline = #c792ea
+
+        unfocused-background = #222222
+
+        urgent-background = #ffcb6b
+
+    ; spotify module colors
+        spotify-underline = #009688         
+
+[bar/top]
+    font-0 = DejaVuSansMono Nerd Font:style=Mono:size=10
+    background = ${colors.bar-background}
+    line-size = 4
+
+    modules-left = date
+    modules-center = i3
+
+[module/date]
+    type = internal/date
+    label-font = 1
+    
+    interval = 1.0
+    date = " %b %d, %Y - %r"
+
+[module/i3]
+    type = internal/i3
+    ; index-sort = true
+    format = <label-state> <label-mode>
+    ;pin-workspaces = true
+
+    ; workspace icons
+    ws-icon-0 = term;
+    ws-icon-1 = web;
+    ws-icon-2 = discord;ﭮ
+    ws-icon-3 = spotify;
+    ws-icon-4 = email;
+    
+    ; selected workspace look
+    label-focused = %icon% %name%
+    label-focused-background = ${colors.focused-background} 
+    label-focused-foreground = ${colors.focused-foreground}
+    label-focused-underline = ${colors.focused-foreground}
+    label-focused-padding = 2
+   
+    ; unselected workspace look
+    label-unfocused = %icon% 
+    label-unfocused-background = ${colors.unfocused-background}
+    label-unfocused-padding = 2
+    
+    ; workspace notification look
+    label-urgent = %icon%
+    label-urgent-background = ${colors.urgent-background}
+    label-urgent-padding = 2
+
+    ; workspace separator
+    label-separator = 
+    label-separator-padding = 1   
+
+    fuzzy-match = true
+

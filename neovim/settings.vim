@@ -69,3 +69,6 @@ autocmd TermOpen * setlocal scrolloff=0
 " Load up spell checker for markdown files and plaintext files
 au BufReadPost,BufNewFile *.md,*.txt setlocal spell | setlocal syntax=markdown
 
+" Disable the background of a colorscheme
+autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+

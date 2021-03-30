@@ -1,0 +1,35 @@
+; FONT USED: DejaVuSansMono Nerd Font
+; COLOR PALLETE: https://www.material-theme.com/docs/reference/color-palette/ 
+; ICONS: https://www.nerdfonts.com/cheat-sheet
+
+[colors]
+    ; main bar colors
+        bar-background = #1d1f21
+
+[bar/main]
+    ; look and feel of the main bar
+    font-0 = DejaVuSansMono Nerd Font:style=Mono:size=10
+    radius=10
+
+    background = ${colors.bar-background}
+    override-redirect = true
+    enable-ipc = true
+
+    ; bar dimensions
+    offset-y = 96%
+    height = 4%
+    line-size = 3
+
+    modules-center = pulseaudio 
+
+[module/pulseaudio]
+    ; general volume settings
+    type = internal/pulseaudio
+    format-volume = <label-volume> <bar-volume>
+    label-volume = Volume: %percentage%%
+    bar-volume-width = 10
+
+    ; graphics for the volume bar
+    bar-volume-empty = -
+    bar-volume-fill = =
+    bar-volume-indicator = "|"

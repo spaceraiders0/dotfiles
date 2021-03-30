@@ -17,5 +17,5 @@
 "
 " =======================================================================================================
 
-colorscheme sitruuna
+colorscheme palenight
 set termguicolors

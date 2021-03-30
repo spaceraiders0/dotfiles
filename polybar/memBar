@@ -1,0 +1,34 @@
+[mem-colors]
+    mem-underline = #004d99
+    mem-background = #822
+    bar-background = #303336
+
+[bar/mem]
+    font-0 = DejaVuSansMono Nerd Font:style=Mono:size=10
+    radius=10
+
+    background = ${mem-colors.bar-background}
+    override-redirect = True
+    enable-ipc = true
+
+    ; bar dimensions
+    offset-y = 96.5%
+    offset-x = 10%
+    height = 3%
+    width = 13%
+    line-size = 3
+
+    modules-center = memory
+
+[module/memory]
+    type = internal/memory
+    interval = 2
+    format = Used Memory   <label> <bar-used>
+
+    ; memory bar looks
+    ; format-background = ${mem-colors.mem-background}
+    format-underline = ${mem-colors.mem-underline}
+    bar-used-width = 10
+    bar-used-empty = =
+    bar-used-fill = #
+    bar-used-indicator = #

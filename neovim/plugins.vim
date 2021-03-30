@@ -40,10 +40,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
 "Plug 'vim-airline/vim-airline-themes'
+Plug 'dracula/vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'sainnhe/sonokai'
 Plug 'eemed/sitruuna.vim'
 Plug 'haishanh/night-owl.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 
 call plug#end()
 

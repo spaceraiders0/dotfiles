@@ -19,14 +19,12 @@
 "
 " =======================================================================================================
 
-
 " Shift screen up and down
 noremap J <C-E>
 noremap K <C-Y>
 
-
 " Terminal Leaving
-tmap <Esc> <C-\><C-n>
+" map <Esc> <C-\><C-n>
 
 " Clear highlighted text
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
@@ -42,26 +40,26 @@ endif
 map Q <NOP>
 
 " Tab management
-map tq :bd!<CR>
-map tj :tabp<CR>
-map tk :tabn<CR>
-map tn :tabnew<CR>
-map tt :tabnew<CR>:terminal<CR>
+" map tq :bd!<CR>
+" map tj :tabp<CR>
+" map tk :tabn<CR>
+" map tn :tabnew<CR>
+" map tt :tabnew<CR>:terminal<CR>
 
 " File management
 map fc :call CopyFilepath()<CR>  
 map fr :e<CR>                    
 
 " Window / Pane management
-nmap <silent> wm :call WindowSwap#EasyWindowSwap()<CR>
-map <C-k> :resize +5<CR>
-map <C-j> :resize -5<CR>
-map <C-h> :vertical resize -5<CR>
-map <C-l> :vertical resize +5<CR>
+" nmap <silent> wm :call WindowSwap#EasyWindowSwap()<CR>
+" map <C-k> :resize +5<CR>
+" map <C-j> :resize -5<CR>
+" map <C-h> :vertical resize -5<CR>
+" map <C-l> :vertical resize +5<CR>
 
 " Buffer management
-nmap <S-Q> :bprevious<CR>
-nmap <S-E> :bnext<CR>
+" nmap <S-Q> :bprevious<CR>
+" nmap <S-E> :bnext<CR>
 
 " C-Style block comments
 let @c = "i/*€kb€kb€kb€kb*/kA @a"

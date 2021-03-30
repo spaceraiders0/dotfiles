@@ -1,0 +1,35 @@
+[volume-colors]
+    bar-background = #303336
+
+[bar/volume]
+    ; look and feel of the main bar
+    font-0 = DejaVuSansMono Nerd Font:style=Mono:size=10
+    radius=10
+
+    background = ${volume-colors.bar-background}
+    override-redirect = True
+    enable-ipc = true
+
+    ; bar dimensions
+    offset-y = 96.5%
+    offset-x = 87%
+    width = 12%
+    height = 3%
+    line-size = 3
+    
+    ; positions of modules
+    modules-center = pulseaudio
+
+[module/pulseaudio]
+    ; general volume settings
+    type = internal/pulseaudio
+    format-volume = <label-volume> <bar-volume>
+    label-volume = Volume: %percentage%%
+    bar-volume-width = 10
+    
+    ; graphics for the volume bar
+    bar-volume-empty = -
+    bar-volume-fill = =
+    bar-volume-indicator = "|"
+
+

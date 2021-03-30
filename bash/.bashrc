@@ -1,10 +1,10 @@
 # Most important export.
-export MAIN="/run/media/$USER/External Storage/"
+export MAIN="/run/media/$USER/External Storage"
 
 # Exports
 export LESS="$LESS -R -Q" # Gets rid of that irritating beep
 export DOTFILES="$MAIN/dotfiles"
-export SHELL="/usr/bin/bash --rcfile ~/.config/bash/.bashrc"
+export SHELL="/usr/bin/bash --rcfile '$DOTFILES/bash/.bashrc'"
 export PS1="[ \[\e[35m\]\u\[\e[m\] @ \[\e[34m\]\W\[\e[m\] ]> "
 export SUDO_PROMPT="[ enter password ]: "
 export EDITOR="nvim"
@@ -24,11 +24,13 @@ alias install="sudo pacman -S"
 alias uninstall="sudo pacman -Rs"
 alias remove="sudo pacman -Rs"
 alias sizes="du -h -d 0 ./* | sort -n"
+alias totalsizes="du -h --summarize"
 alias set-wallpaper="feh --bg-fill"
 alias dependants="pacman -Qi"
 alias retag="find . -type f -printf '\"%p\"\n' | xargs mass-tag.py --title --album --artist"
 alias storage="cd \"$MAIN\""
 alias programming="cd \"$MAIN/programming\""
+alias pavol="pactl set-sink-volume @DEFAULT_SINK@"
 alias ..='cd ..'
 alias :q=exit
 
@@ -58,6 +60,9 @@ fi
 
 # Set dircolors
 eval "$(dircolors ~/.config/dircolors.txt)"
+
+# Vi emulation
+set -o vi
 
 # Autoload into the programming directory.
 programming
