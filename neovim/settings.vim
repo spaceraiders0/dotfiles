@@ -27,7 +27,7 @@ set expandtab
 set cursorline
 set nocompatible
 set relativenumber
-set laststatus=1
+set laststatus=2
 set shell=/usr/bin/bash
 set scrolloff=5
 set foldignore=

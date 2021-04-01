@@ -64,5 +64,7 @@ eval "$(dircolors ~/.config/dircolors.txt)"
 # Vi emulation
 set -o vi
 
-# Autoload into the programming directory.
-programming
+# Autoload into the programming directory. (Unless this is in Tmux)
+if [ -z "${TMUX}" ]; then
+    programming
+fi
