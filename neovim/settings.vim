@@ -23,6 +23,7 @@
 
 " Editing settings
 set nowrap
+set number
 set expandtab
 set cursorline
 set nocompatible
@@ -70,5 +71,4 @@ autocmd TermOpen * setlocal scrolloff=0
 au BufReadPost,BufNewFile *.md,*.txt setlocal spell | setlocal syntax=markdown
 
 " Disable the background of a colorscheme
-autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
-
+" autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE

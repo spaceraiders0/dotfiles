@@ -17,5 +17,5 @@
 "
 " =======================================================================================================
 
-colorscheme palenight
+colorscheme onedark
 set termguicolors
