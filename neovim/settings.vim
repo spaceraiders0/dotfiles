@@ -23,6 +23,7 @@
 
 " Editing settings
 set nowrap
+set autochdir
 set number
 set expandtab
 set cursorline

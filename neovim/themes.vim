@@ -17,5 +17,5 @@
 "
 " =======================================================================================================
 
-colorscheme onedark
+colorscheme sitruuna
 set termguicolors

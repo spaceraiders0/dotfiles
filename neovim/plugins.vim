@@ -23,19 +23,19 @@ call plug#begin('~/.vim/plugged')
 
 " Visual / Quality of Life
 Plug 'machakann/vim-highlightedyank'
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 " Plug 'Yggdroot/indentLine'
 Plug 'chrisbra/Colorizer'
 Plug 'ryanoasis/vim-devicons'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'vim-python/python-syntax'
-Plug 'akinsho/nvim-bufferline.lua'
-Plug 'liuchengxu/vista.vim'
+" Plug 'akinsho/nvim-bufferline.lua'
+" Plug 'liuchengxu/vista.vim'
 " Plug 'unkiwii/vim-nerdtree-sync'
 
 " File Management
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-eunuch'
+" Plug 'scrooloose/nerdtree'
+" Plug 'tpope/vim-eunuch'
 
 " Autocompletion
 Plug 'neovim/nvim-lsp'
@@ -55,6 +55,7 @@ Plug 'eemed/sitruuna.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'cormacrelf/vim-colors-github'
 
 call plug#end()
 
@@ -68,24 +69,24 @@ let g:python_highlight_all = 1
 let g:cpp_member_highlight = 1
 
 " Airline configuration
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
+" if !exists('g:airline_symbols')
+"     let g:airline_symbols = {}
+" endif
+" 
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = ''
+" 
+" " let g:airline#extensions#tabline#formatter = 'unique_tail'
+" " let g:airline_powerline_fonts = 1
+" " let g:airline#extensions#tabline#show_buffers = 0
+" let g:airline#extensions#tabline#enabled = 0
 
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-" let g:airline#extensions#tabline#formatter = 'unique_tail'
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#enabled = 0
-
-autocmd VimEnter * silent AirlineToggleWhitespace
+" autocmd VimEnter * silent AirlineToggleWhitespace
 
 " Indent Lines configuration
 " let g:indentLine_char = '┊'               
@@ -95,7 +96,7 @@ autocmd VimEnter * silent AirlineToggleWhitespace
 " autocmd VimEnter * LeadingSpaceEnable     
 
 " Vista configuration
-let g:vista_sidebar_position="vertical topleft"
+" let g:vista_sidebar_position="vertical topleft"
 
 " NERDTree Configuration
 let NERDTreeShowHidden=1                                       
@@ -103,11 +104,12 @@ let NERDTreeWinPos="right"
 
 lua << EOF
 require'lspconfig'.ccls.setup{on_attach=require'completion'.on_attach}
+--require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.jedi_language_server.setup{on_attach=require'completion'.on_attach}
-require'bufferline'.setup{
-    options = {
-        separator_style="slant",
-        enforce_regular_tabs=true,
-    }
-}
+-- require'bufferline'.setup{
+--     options = {
+--         separator_style="slant",
+--         enforce_regular_tabs=true,
+--     }
+-- }
 EOF

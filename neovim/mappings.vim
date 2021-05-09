@@ -51,9 +51,9 @@ map fc :call CopyFilepath()<CR>
 map fr :e<CR>                    
 
 " Buffer management
-nmap bp :bprevious<CR>
-nmap bn :bnext<CR>
-nmap bt :terminal<CR>
+nmap zp :bprevious<CR>
+nmap zn :bnext<CR>
+nmap zt :terminal<CR>
 
 " NERDTree
 map <C-N> :NERDTreeToggle %<CR> " Toggle in file's directory   
