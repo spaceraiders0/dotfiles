@@ -5,6 +5,9 @@ All of my dotfiles.
 So far, this contains dotfiles for..
 - NeoVim
 - Bash
+- i3
+- polybar
+- tmux
 
 ## Information
 This collection of configuration files is very personal, and thus some parts of
